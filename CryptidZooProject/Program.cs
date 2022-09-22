@@ -1,7 +1,18 @@
+using CryptidZooProject;
+using MySql.Data.MySqlClient;
+using System.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IDbConnection>((s) =>
+{
+    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("cryptidsDb"));
+    conn.Open();
+    return conn;
+});
+builder.Services.AddTransient< ICryptidsRepository, CryptidsRepository>();
 
 var app = builder.Build();
 

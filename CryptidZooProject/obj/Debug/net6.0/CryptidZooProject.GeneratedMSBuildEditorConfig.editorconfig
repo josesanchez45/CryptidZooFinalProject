@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\17144\Desktop\repos\CryptidZooProject\CryptidZooProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Cryptids/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J5cHRpZHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

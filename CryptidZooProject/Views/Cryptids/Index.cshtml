@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Cryptids>
+
+<h2>Cryptids</h2>
+<table class="table">
+    <tr>
+        <th>First Year Reported</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Last Year Reported</th>
+    </tr>
+
+    @foreach (var cryptid in @Model)
+    {
+        <tr>
+            <td>@cryptid.FirstYearReported</td>
+            <td>@cryptid.Name</td>
+            <td>@cryptid.Description</td>
+            <td>@cryptid.Location</td>
+            <td>@cryptid.LastYearReported</td>
+        </tr>
+    }
+
+</table>
