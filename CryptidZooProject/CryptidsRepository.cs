@@ -15,5 +15,9 @@ namespace CryptidZooProject
         {
             return _conn.Query<Cryptids>("SELECT * FROM cryptid;");
         }
+        public Cryptids GetCryptid(int id)
+        {
+            return _conn.QuerySingle<Cryptids>("SELECT * FROM cryptid WHERE CreatureId = @id", new { id = id });
+        }
     }
 }

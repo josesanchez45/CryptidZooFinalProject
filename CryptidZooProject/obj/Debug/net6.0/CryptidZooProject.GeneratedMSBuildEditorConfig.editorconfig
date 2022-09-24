@@ -15,8 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\17144\Desktop\repos\CryptidZooProject\CryptidZooProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Comments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Comments/UpdateComments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcVXBkYXRlQ29tbWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Comments/ViewComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcVmlld0NvbW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Cryptids/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J5cHRpZHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Cryptids/ViewCryptid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3J5cHRpZHNcVmlld0NyeXB0aWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/17144/Desktop/repos/CryptidZooProject/CryptidZooProject/Views/Home/Index.cshtml]

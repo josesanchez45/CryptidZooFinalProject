@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Comments>
+
+<h2>Feel free to leave comments of sightings or fun facts!</h2>
+<table class="table">
+    <tr>
+        <th>Display Name</th>
+        <th>Comment</th>
+        <th>Cryptid</th>
+    </tr>
+
+    @foreach (var comment in @Model)
+    {
+
+        <tr>
+            <td><a href=/Comments/ViewComment/@comment.CommentId>@comment.DisplayName</a></td>
+            <td>@comment.Comment</td>
+            <td>@comment.Cryptid</td>
+
+        </tr>
+    }
+
+</table>

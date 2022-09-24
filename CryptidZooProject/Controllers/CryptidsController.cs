@@ -16,5 +16,10 @@ namespace CryptidZooProject.Controllers
             var cryptid = repo.GetAllCryptids();
             return View(cryptid);
         }
+        public IActionResult ViewCryptid (int id)
+        {
+            var cryptid = repo.GetCryptid(id);
+            return View(cryptid);
+        }
     }
 }

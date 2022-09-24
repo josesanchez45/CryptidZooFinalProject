@@ -1,0 +1,20 @@
+﻿@model Comments
+
+<h3>@Model.Comment Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Display Name</th>
+        <th>Comments</th>
+        <th>Cryptid</th>
+
+    </tr>
+    <tr>
+        <td>@Model.DisplayName</td>
+        <td>@Model.Comment</td>
+        <td>@Model.Cryptid</td>
+    </tr>
+</table>
+<div style="display: block">
+    <a href="/Comments/UpdateComments/@Model.CommentId">Update this Comment</a>
+</div>

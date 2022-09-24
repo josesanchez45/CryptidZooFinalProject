@@ -14,6 +14,9 @@ builder.Services.AddScoped<IDbConnection>((s) =>
 });
 builder.Services.AddTransient< ICryptidsRepository, CryptidsRepository>();
 
+builder.Services.AddTransient<ICommentsRepository, CommentsRepository>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
