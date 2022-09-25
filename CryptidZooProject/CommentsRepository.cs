@@ -25,8 +25,23 @@ namespace CryptidZooProject
             _conn.Execute("UPDATE commentsection SET DisplayName = @name, Comment = @comment WHERE Cryptid = @cryptid",
              new { name = comm.DisplayName, comment = comm.Comment, cryptid = comm.Cryptid });
         }
-   
+        public void InsertComment(Comments commentToInsert)
+        {
+            _conn.Execute("INSERT INTO commentsection (NAME, Comment, commentID) VALUES (@name, @price, @CommentID);",
+                new { name = commentToInsert.DisplayName, comment = commentToInsert.Comment, commentID = commentToInsert.CommentId });
+        }
 
+        public IEnumerable<CommentIds> GetAllCommentIds()
+        {
+            return _conn.Query<CommentIds>("SELECT * FROM commenttag;");
+        }
 
+        public Comments AssignCommentID()
+        {
+            var commentIdList = GetAllCommentIds();
+            var comment = new Comments();
+           comment.CommentIds = commentIdList;
+            return comment; 
+        }
     }
 }

@@ -6,5 +6,6 @@
         public string DisplayName { get; set; }
         public string Comment { get; set; }
         public string Cryptid { get; set; }
+        public IEnumerable<CommentIds> CommentIds { get; set; }
     }
 }

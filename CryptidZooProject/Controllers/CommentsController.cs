@@ -37,6 +37,16 @@ namespace CryptidZooProject.Controllers
 
             return RedirectToAction("ViewComment", new { id = comm.CommentId });
         }
+        public IActionResult InsertProduct()
+        {
+            var comm = repo.AssignCommentID();
+            return View(comm);
+        }
+        public IActionResult InsertCommentToDatabase(Comments commentToInsert)
+        {
+            repo.InsertComment(commentToInsert);
+            return RedirectToAction("Index");
+        }
 
     }
 }

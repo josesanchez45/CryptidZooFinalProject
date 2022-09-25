@@ -8,6 +8,10 @@ namespace CryptidZooProject
         public Comments GetComment(int id);
 
         public void UpdateComment(Comments comm);
+        public void InsertComment (Comments commentToInsert);
+        public IEnumerable<CommentIds> GetAllCommentIds();
+        public Comments AssignCommentID();
+        
      
       
     }

@@ -4,7 +4,7 @@
 
 @using (Html.BeginForm("UpdatecommentsectionDatabase", "Comment", "Post"))
 {
-    <input asp-for="CommentId" type="hidden" value="@Model.CommentId" />
+    <input asp-for="Comment" type="hidden" value="@Model.CommentId" />
 
     <label asp-for="DisplayName" class="control-label">Name</label>
     <input type="text" name="Name" class="form-control" value="@Model.DisplayName" />
