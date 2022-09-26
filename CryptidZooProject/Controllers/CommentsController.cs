@@ -22,7 +22,7 @@ namespace CryptidZooProject.Controllers
             var comment = repo.GetComment(id);
             return View(comment);
         }
-        public IActionResult UpdatecComment(int id)
+        public IActionResult UpdateComments(int id)
         {
             Comments comm = repo.GetComment(id);
             if (comm == null)
@@ -37,7 +37,7 @@ namespace CryptidZooProject.Controllers
 
             return RedirectToAction("ViewComment", new { id = comm.CommentId });
         }
-        public IActionResult InsertProduct()
+        public IActionResult InsertComment()
         {
             var comm = repo.AssignCommentID();
             return View(comm);
@@ -45,6 +45,11 @@ namespace CryptidZooProject.Controllers
         public IActionResult InsertCommentToDatabase(Comments commentToInsert)
         {
             repo.InsertComment(commentToInsert);
+            return RedirectToAction("Index");
+        }
+        public IActionResult DeleteComment(Comments comm)
+        {
+            repo.DeleteComment(comm);
             return RedirectToAction("Index");
         }
 

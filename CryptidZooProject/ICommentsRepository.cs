@@ -11,8 +11,9 @@ namespace CryptidZooProject
         public void InsertComment (Comments commentToInsert);
         public IEnumerable<CommentIds> GetAllCommentIds();
         public Comments AssignCommentID();
-        
-     
-      
+        public void DeleteComment(Comments comment);
+
+
+
     }
 }

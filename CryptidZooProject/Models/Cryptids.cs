@@ -8,5 +8,7 @@
         public string Location { get; set; }
         public int LastYearReported { get; set; }
         public int CreatureId { get; set; }
+        public string Image { get; set; }   
+
     }
 }

@@ -22,13 +22,13 @@ namespace CryptidZooProject
         }
         public void UpdateComment(Comments comm)
         {
-            _conn.Execute("UPDATE commentsection SET DisplayName = @name, Comment = @comment WHERE Cryptid = @cryptid",
-             new { name = comm.DisplayName, comment = comm.Comment, cryptid = comm.Cryptid });
+            _conn.Execute("UPDATE commentsection SET DisplayName = @name, Comment = @comment WHERE CommentId = @id",
+             new { name = comm.DisplayName, comment = comm.Comment, id = comm.CommentId });
         }
         public void InsertComment(Comments commentToInsert)
         {
-            _conn.Execute("INSERT INTO commentsection (NAME, Comment, commentID) VALUES (@name, @price, @CommentID);",
-                new { name = commentToInsert.DisplayName, comment = commentToInsert.Comment, commentID = commentToInsert.CommentId });
+            _conn.Execute("INSERT INTO commentsection (DisplayName, Comment, CommentID) VALUES (@Name, @Comment, @CommentID);",
+                new { Name = commentToInsert.DisplayName, Comment = commentToInsert.Comment, CommentID = commentToInsert.CommentId });
         }
 
         public IEnumerable<CommentIds> GetAllCommentIds()
@@ -42,6 +42,12 @@ namespace CryptidZooProject
             var comment = new Comments();
            comment.CommentIds = commentIdList;
             return comment; 
+        }
+        public void DeleteComment(Comments comment)
+        {
+            _conn.Execute("DELETE FROM commentsection WHERE CommentId = @id;", new { id = comment.CommentId });
+            _conn.Execute("DELETE FROM commentsection WHERE DisplayName = @name;", new { name = comment.DisplayName});
+            _conn.Execute("DELETE FROM commentsection WHERE Comment = @comm;", new { comm = comment.Comment});
         }
     }
 }

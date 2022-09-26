@@ -1,20 +1,30 @@
 ﻿@model Comments
 
-<h3>@Model.Comment Information</h3>
+<h3>@Model.DisplayName</h3>
 
-<table class="table">
+<table class="table table-dark table-striped">
     <tr>
         <th>Display Name</th>
         <th>Comments</th>
-        <th>Cryptid</th>
+      
 
     </tr>
     <tr>
         <td>@Model.DisplayName</td>
         <td>@Model.Comment</td>
-        <td>@Model.Cryptid</td>
+        
     </tr>
 </table>
 <div style="display: block">
-    <a href="/Comments/UpdateComments/@Model.CommentId">Update this Comment</a>
+    <a href="/Comments/UpdateComments/@Model.CommentId"class="link-success">Update this Comment</a>
+</div>
+
+<div style="display: block">
+    <div class="alert alert-danger" role="alert">
+    @using (Html.BeginForm("DeleteComment", "Comments", "Post"))
+    {
+        <input type="hidden" asp-for="CommentId" value="@Model.CommentId" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Comment" />
+    }
+    </div>
 </div>
