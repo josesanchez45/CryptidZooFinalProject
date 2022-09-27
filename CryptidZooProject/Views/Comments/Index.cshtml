@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Comments>
 
-<h2>Feel free to leave comments of sightings or fun facts!</h2>
+<h2 class="viewHeading">Feel free to leave comments of sightings or fun facts!</h2>
 <div style="display: block">
     <a class ="link-success nounderline" href="/Comments/InsertComment/">Add a New Comment</a>
 </div>
@@ -14,7 +14,7 @@
     {
 
         <tr>
-            <td><a href=/Comments/ViewComment/@comment.CommentId>@comment.DisplayName</a></td>
+            <td><a class="nounderline" href=/Comments/ViewComment/@comment.CommentId>@comment.DisplayName</a></td>
             <td>@comment.Comment</td>
         </tr>
     }
