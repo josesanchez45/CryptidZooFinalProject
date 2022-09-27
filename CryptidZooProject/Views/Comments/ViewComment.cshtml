@@ -1,6 +1,6 @@
 ﻿@model Comments
 
-<h3>@Model.DisplayName</h3>
+<h3 class="viewHeading" >@Model.DisplayName</h3>
 
 <table class="table table-dark table-striped">
     <tr>
@@ -16,7 +16,7 @@
     </tr>
 </table>
 <div style="display: block">
-    <a class ="link-success nounderline" href="/Comments/UpdateComments/@Model.CommentId"class="link-success">Update this Comment</a>
+    <a href="/Comments/UpdateComments/@Model.CommentId"class="link-success">Update this Comment</a>
 </div>
 
 <div style="display: block">
