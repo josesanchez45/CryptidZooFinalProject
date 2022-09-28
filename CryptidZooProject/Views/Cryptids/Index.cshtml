@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Cryptids>
 
-<h2>Cryptids</h2>
+<h2 class="viewHeading">Cryptids</h2>
 <table class="table table-dark table-striped">
     <tr>
         <th>First Year Reported</th>
@@ -14,7 +14,7 @@
     {
         <tr>
             <td>@cryptid.FirstYearReported</td>
-            <td> <a href =/Cryptids/ViewCryptid/@cryptid.CreatureId class="link-success">@cryptid.Name</a></td>
+            <td> <a class="nounderline" href =/Cryptids/ViewCryptid/@cryptid.CreatureId>@cryptid.Name</a></td>
             <td>@cryptid.Description</td>
             <td>@cryptid.Location</td>
             <td>@cryptid.LastYearReported</td>
@@ -22,4 +22,7 @@
     }
 
 </table>
-<img C:\Users\17144\Desktop\CryptidZoo\mothman />
+<div>
+   <a class="nounderline" href =/Photos/Index>View Images</a>
+</div>
+

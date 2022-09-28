@@ -7,31 +7,35 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CryptidZooProject.styles.css" asp-append-version="true" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-light navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CryptidZooProject</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="navbar-brand link-success" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <li class="navBar">
+                            <a class="navBar nounderline" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand link-success" asp-area="" asp-controller="Cryptids" asp-action="Index" class="link-success">Cryptids List</a>
+                        <li class="navBar">
+                            <a class="navBar nounderline" asp-area="" asp-controller="Cryptids" asp-action="Index" class="link-success">Cryptids List</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand link-success" asp-area="" asp-controller="Comments" asp-action="Index">Comments</a>
+                        <li class="navBar">
+                            <a class="navBar nounderline" asp-area="" asp-controller="Comments" asp-action="Index">Comments</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand link-success" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                          <li class="navBar">
+                            <a class="navBar nounderline" asp-area="" asp-controller="Photos" asp-action="Index">Images</a>
+                        </li>
+                        <li class="navBar">
+                            <a class="navBar nounderline" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
 
                     </ul>
@@ -48,12 +52,75 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - CryptidZooProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - CryptidZooProject - <a class="nounderline" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), url(/Images/backgroundimage.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fontDesignMainHeading {
+            font-family: 'Road Rage', cursive;
+            text-size-adjust: auto;
+            text-align: center;
+            color: firebrick;
+            font-size: 9.375rem;
+        }
+
+        .secondaryHeading {
+            font-family: 'Road Rage', cursive;
+            text-size-adjust: auto;
+            text-align: center;
+            color: firebrick;
+            font-size: 5rem;
+        }
+
+        .viewHeading {
+            font-family: 'Road Rage', cursive;
+            text-size-adjust: auto;
+            text-align: left;
+            color: firebrick;
+            font-size: 5rem;
+        }
+
+        .paragraphsHome {
+            font-family: 'Road Rage', cursive;
+            text-size-adjust: auto;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .navBar {
+            font-family: 'Road Rage', cursive;
+            text-size-adjust: auto;
+            color: firebrick;
+            padding: 5px;
+            font-size: 2rem;
+        }
+
+            .navBar:hover {
+                color: seagreen;
+            }
+
+        a:hover {
+            color: seagreen;
+        }
+
+        .inputFont {
+            font-family: 'Road Rage', cursive;
+            text-size-adjust: auto;
+            color: firebrick;
+            font-size: 2rem;
+        }
+
+    </style>
 </body>
 </html>

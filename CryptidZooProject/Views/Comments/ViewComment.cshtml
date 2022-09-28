@@ -1,6 +1,6 @@
 ﻿@model Comments
 
-<h3>@Model.DisplayName</h3>
+<h3 class="viewHeading" >@Model.DisplayName</h3>
 
 <table class="table table-dark table-striped">
     <tr>
@@ -20,11 +20,12 @@
 </div>
 
 <div style="display: block">
-    <div class="alert alert-danger" role="alert">
+    
     @using (Html.BeginForm("DeleteComment", "Comments", "Post"))
     {
         <input type="hidden" asp-for="CommentId" value="@Model.CommentId" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Comment" />
+       
+        <input class="alert alert-danger" role="alert" type="submit" onclick="return confirm('Are you sure?')" value="Delete this Comment" />
     }
-    </div>
+    
 </div>
