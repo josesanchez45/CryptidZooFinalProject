@@ -1,21 +1,21 @@
 ﻿@model Comments
 
-<h2>Create a New Comment</h2>
+<h2 class="viewHeading">Create a New Comment</h2>
 
 @using (Html.BeginForm("InsertCommentToDatabase", "Comments", "Post"))
 {
     <input asp-for="CommentId" type="hidden" value="" />
 
-    <label asp-for="DisplayName" class="control-label">Name</label>
+    <label asp-for="DisplayName" class="control-label inputFont">Name</label>
     <input type="text" name="DisplayName" class="form-control" value="" />
 
 
-    <label asp-for="Comment" class="control-label">Comment</label>
+    <label asp-for="Comment" class="control-label inputFont">Comment</label>
     <input type="text" name="Comment" class="form-control" />
 
 
     <div class="form-group">
-        <label for="">Select a Category</label>
+        <label class="inputFont" for="">Select a Category</label>
         <select class="form-control" name="CommentIds" value="">
             @foreach (var comm in Model.CommentIds)
             {
